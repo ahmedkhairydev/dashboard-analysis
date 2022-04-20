@@ -100,7 +100,7 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('selectedPoint', JSON.stringify(selectedPoint));
 
     // this.router.navigate(['/dashboard/details'], { queryParams: this.activatedRoute.snapshot.queryParams });
-    window.open(`/dashboard/details`, '_self');
+    window.open(`${location.href.split('?').shift()}/details`, '_self');
   }
 
   ngOnDestroy(): void {
