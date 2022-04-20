@@ -1,0 +1,18 @@
+{
+  "HOME": "Home",
+  "CHART": "Analysis Chart",
+  "CHART_DETAILS": "Chart Details",
+  "LESSONS": "No. of Lessons",
+  "FIELDS": {
+    "SELECT": "Select ",
+    "COUNTRY": "Country",
+    "MONTH": "Month",
+    "LESSON": "Lesson",
+    "TOTALMONTHLESSON": "Total Lesson of Month",
+    "CAMP": "Camp",
+    "SCHOOL": "School"
+  },
+  "ERROR": {
+    "404": "PAGE NOT FOUND"
+  }
+}

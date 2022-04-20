@@ -1,0 +1,110 @@
+button {
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .mat-button-focus-overlay {
+    background: $white;
+  }
+}
+
+.btn-disabled {
+  background-color: transparent !important;
+}
+
+.main-btn {
+  border-radius: 0 !important;
+  min-width: 34px !important;
+  min-height: 34px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  * {
+    vertical-align: unset !important;
+  }
+
+  &.has-svg {
+    &:disabled {
+      svg {
+        stroke: #dde0e2;
+      }
+    }
+  }
+
+  &.white {
+    background-color: $white;
+    color: $primary;
+  }
+
+  &.main {
+    background-color: $primary;
+
+    * {
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: #dde0e2;
+    }
+  }
+
+  &.light {
+    background-color: $primary-light;
+    color: $white;
+
+    &:disabled {
+      background-color: #dde0e2;
+    }
+  }
+
+  &.flat {
+    border: none;
+    color: $primary;
+  }
+
+  &.strock {
+    border: 1.5px solid $middle !important;
+    // color: $primary;
+
+    &.active {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &.text-error {
+      border-color: $error !important;
+    }
+  }
+
+  &.strock-bg {
+    background-color: $white;
+    border-color: $primary !important;
+    color: $primary;
+
+    &.active {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &.danger {
+      background-color: $white !important;
+      border-color: $error !important;
+      color: $error !important;
+    }
+  }
+
+  &.error {
+    border-color: $error !important;
+  }
+
+  .mat-button-wrapper {
+    width: 100%;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
