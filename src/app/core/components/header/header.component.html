@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-white justify-content-between justify-content-xl-start py-0" (isEnglish)="isEnglish = $event">
+    <div class="sidebar-logo d-flex justify-content-start">
+        <a class="w-100 d-flex justify-content-center align-items-center" [routerLink]="[ '/' ]">
+            <img src="assets/images/logo/logo.svg" alt="Logo Icon">
+        </a>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" (click)="collaped = !collaped" class="d-block d-xl-none" fill="none" width="40" viewBox="0 0 24 24"
+         stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+    <div class="navbar-start d-flex flex-column flex-xl-row justify-content-xl-between text-black" [ngClass]="{'show': collaped}">
+        <div class="nav-wrapper d-flex align-items-center w-100">
+            <mat-list class="navbar-nav d-flex align-items-center p-0" role="list">
+                <mat-list-item class="nav-item px-3 bg-page d-xl-none" role="listitem">
+                    <a class="w-100 d-flex align-items-center" [routerLink]="[ '/' ]">
+                        <img src="assets/images/logo/logo.svg" alt="Logo Icon">
+                    </a>
+                </mat-list-item>
+
+                <mat-list-item class="nav-item mx-3" role="listitem" routerLinkActive="active">
+                    <a class="nav-link py-3 px-lg-0 font-15" [routerLink]="[ '/' ]">
+                        <button mat-button class="main-btn text-white font-16">
+                            <div class="d-flex align-items-center">
+                                <svg class="m-inline-end-2" xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                     stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+
+                                <span>{{ 'HOME' | translate }}</span>
+                            </div>
+                        </button>
+                    </a>
+                </mat-list-item>
+
+                <mat-list-item role="listitem">
+                    <button mat-button class="main-btn text-black font-18" (click)="changeLanguage()">
+                        <div class="d-flex align-items-center">
+                            <svg class="m-inline-end-2" xmlns="http://www.w3.org/2000/svg" fill="none" width="18" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+
+                            <span class="font-english">
+                                {{ isEnglish ? 'العربية' : 'English' }}
+                            </span>
+                        </div>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+</nav>

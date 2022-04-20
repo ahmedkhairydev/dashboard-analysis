@@ -1,0 +1,28 @@
+<div class="analysis-chart page-wrapper">
+    <h3 class="m-0 regular font-26 text-main">{{ 'CHART' | translate }}</h3>
+    <h6 class="m-0 regular font-20 text-main-light mt-2">
+        {{ 'LESSONS' | translate }} -
+        <b>{{ totalNoOfLessons }}</b>
+        {{ 'FIELDS.LESSON' | translate }}
+    </h6>
+
+    <form class="filter-wrapper d-flex flex-column flex-lg-row mt-4" [formGroup]="chartFilterFormGroup" *ngIf="chartFilterFormGroup">
+        <app-dropdown [formGroup]="chartFilterFormGroup" controlName="country" [options]="countries$" bindValue="text"
+                      [label]="('FIELDS.SELECT' | translate) + ('FIELDS.COUNTRY' | translate)">
+        </app-dropdown>
+
+        <div class="mx-lg-3">
+            <app-dropdown [formGroup]="chartFilterFormGroup" controlName="camp" [options]="camps$" bindValue="text"
+                          [label]="('FIELDS.SELECT' | translate) + ('FIELDS.CAMP' | translate)">
+            </app-dropdown>
+        </div>
+
+        <app-dropdown [formGroup]="chartFilterFormGroup" controlName="school" [options]="schools$" bindValue="text"
+                      [label]="('FIELDS.SELECT' | translate) + ('FIELDS.SCHOOL' | translate)">
+        </app-dropdown>
+    </form>
+
+    <div class="chart-wrapper mt-4" *ngIf="series.length">
+        <app-line [labels]="labels" [series]="series" [yaxisTitle]="'LESSONS' | translate" (selectedPoint)="getSelectedPoint($event)"></app-line>
+    </div>
+</div>

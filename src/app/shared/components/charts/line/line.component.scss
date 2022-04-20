@@ -1,0 +1,26 @@
+::ng-deep.apexcharts-canvas {
+    .apexcharts-datalabel {
+        fill: #1d252d;
+    }
+
+    .apexcharts-legend {
+        flex-direction: column;
+
+        .apexcharts-legend-series {
+            display: flex;
+            align-items: center;
+            height: max-content;
+
+            .apexcharts-legend-marker {
+                width: 7px !important;
+                height: 17px !important;
+                margin-right: 0;
+                margin-inline-end: 16px;
+            }
+
+            .apexcharts-legend-text {
+                color: #1d252d !important;
+            }
+        }
+    }
+}

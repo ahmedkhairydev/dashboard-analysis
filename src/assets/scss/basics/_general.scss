@@ -1,0 +1,40 @@
+a {
+    text-decoration: none !important;
+    color: inherit;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5 !important;
+}
+
+body {
+    text-align: start;
+
+    .cdk-global-overlay-wrapper {
+        direction: ltr !important;
+    }
+}
+
+[dir=rtl] * {
+    direction: rtl;
+}
+
+[dir=ltr] * {
+    direction: ltr;
+}
+
+.rtl {
+    .cdk-global-overlay-wrapper {
+        direction: rtl !important;
+    }
+}
+
+grammarly-desktop-integration {
+    display: none;
+}

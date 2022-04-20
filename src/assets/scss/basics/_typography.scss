@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+$font-regular: "Cairo", sans-serif;
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  text-align: start;
+  margin: 0;
+  background-color: $page-bg;
+  font-family: $font-regular;
+
+  * {
+    font-family: $font-regular;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5 !important;
+  font-family: $font-regular !important;
+
+  &:not(.regular) {
+    font-weight: bold;
+  }
+}
+
+.font-10 {
+  font-size: clamp(0.65rem, 1vw, 1rem) !important;
+}
+
+.font-12 {
+  font-size: clamp(0.75rem, 1vw, 1.25rem) !important;
+}
+
+.font-14 {
+  font-size: clamp(0.85rem, 1vw, 1.5rem) !important;
+}
+
+.font-16 {
+  font-size: clamp(0.95rem, 1vw, 1.75rem) !important;
+}
+
+.font-18 {
+  font-size: clamp(1.15rem, 1vw, 2rem) !important;
+}
+
+.font-20 {
+  font-size: clamp(1.35rem, 1vw, 2.15rem) !important;
+}
+
+.font-22 {
+  font-size: clamp(1.5rem, 1vw, 2.3rem) !important;
+}
+
+.font-24 {
+  font-size: clamp(1.65rem, 1vw, 2.45rem) !important;
+}
+
+.font-26 {
+  font-size: clamp(1.8rem, 1vw, 2.6rem) !important;
+}

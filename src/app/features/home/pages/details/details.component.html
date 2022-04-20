@@ -1,0 +1,13 @@
+<div class="details page-wrapper d-flex flex-column h-100" *ngIf="chartDetailsKeys">
+    <h3 class="m-0 regular font-26 text-main">{{ 'CHART_DETAILS' | translate }}</h3>
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="chart p-4 bg-white box-shadow">
+            <div [ngClass]="{'d-none': !chartDetails[key]}" *ngFor="let key of chartDetailsKeys; let i=index">
+                <label for="value" class="text-middle font-14 mb-1" *ngIf="chartDetails[key]">{{ ('FIELDS.' + key) | uppercase | translate }}</label>
+    
+                <h6 class="m-0 font-16 fw-bold">{{ chartDetails[key] }}</h6>
+            </div>
+        </div>
+    </div>
+</div>
